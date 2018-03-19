@@ -1,0 +1,19 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "",
+    "AzureWebJobs.HttpTrigger.Disabled": "true",
+    "AzureWebJobsDashboard": "",
+    "AzureWebJobsStorage": "",
+    "FUNCTION_APP_EDIT_MODE": "read",
+    "FUNCTIONS_EXTENSION_VERSION": "beta",
+    "REMOTEDEBUGGINGVERSION": "15.0.26730.8",
+    "ScmType": "None",
+    "WEBSITE_AUTH_ENABLED": "False",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "",
+    "WEBSITE_CONTENTSHARE": "erp-integrations-content",
+    "WEBSITE_NODE_DEFAULT_VERSION": "6.5.0",
+    "WEBSITE_SITE_NAME": "erp-integrations",
+    "WEBSITE_SLOT_NAME": "Production"
+  }
+}

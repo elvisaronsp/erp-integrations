@@ -1,0 +1,59 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build (Debug Configuration)",
+      "identifier": "buildDebug",
+      "command": "dotnet build",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Build (Release Configuration)",
+      "identifier": "buildRelease",
+      "command": "dotnet build --configuration \"Release\"",
+      "type": "shell",
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Start Local Host",
+      "identifier": "startLocalHost",
+      "type": "shell",
+      "dependsOn": "buildDebug",
+      "options": {
+        "cwd": "${workspaceFolder}/Api/bin/Debug/netstandard2.0"
+      },
+      "command": "func host start",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Publish to Azure",
+      "identifier": "publish",
+      "type": "shell",
+      "dependsOn": "buildRelease",
+      "options": {
+        "cwd": "${workspaceFolder}/Api/bin/Release/netstandard2.0"
+      },
+      "command": "func azure functionapp publish erp-integrations",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

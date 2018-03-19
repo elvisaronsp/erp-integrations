@@ -1,0 +1,7 @@
+{
+  "azureFunctions.deploySubpath": "bin/Debug/netstandard2.0",
+  "azureFunctions.projectLanguage": "C#",
+  "azureFunctions.projectRuntime": "beta",
+  "azureFunctions.templateFilter": "Verified",
+  "editor.tabSize": 4
+}

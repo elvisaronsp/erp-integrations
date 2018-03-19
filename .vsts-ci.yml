@@ -1,0 +1,36 @@
+queue:
+  name: webc-Build01
+
+steps:
+- task: DotNetCoreCLI@2
+  displayName: Restore NuGet Packages
+  inputs:
+    command: restore
+    projects: "**/*.csproj"
+
+- task: DotNetCoreCLI@2
+  displayName: Compile
+  inputs:
+    command: build
+    projects: "**/*.csproj"
+
+- task: DotNetCoreCLI@2
+  displayName: Prepare Publish Files
+  inputs:
+    command: publish
+    projects: "**/*.csproj"
+    arguments: --output $(Build.ArtifactStagingDirectory)
+
+- task: PublishBuildArtifacts@1
+  displayName: Publish Artifacts
+  inputs:
+    pathToPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: deploy
+    artifactType: container
+
+- task: PublishBuildArtifacts@1
+  displayName: Publish Templates
+  inputs:
+    pathToPublish: deployment
+    artifactName: templates
+    artifactType: container
