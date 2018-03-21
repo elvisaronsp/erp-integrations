@@ -18,11 +18,17 @@ Update the webCRM SDK, `WebcrmConnector/WebcrmSdk.cs`. The command is ignored if
 
     dotnet build --configuration GenerateWebcrmSdk
 
-## Running
+## Hosting Locally
 
-Run the following command in the folder `/Api/bin/Debug/netstandard2.0`.
+Start a local Functions App host with the following command in the folder `/Api/bin/Debug/netstandard2.0`.
 
     func host start
+
+## Running the Tests
+
+Build the project first, start the local host server, and run the following command. You don't need to rebuild betwen  making changes to the test code.
+
+    dotnet test Api.Test
 
 ## Publish From the Command Line
 

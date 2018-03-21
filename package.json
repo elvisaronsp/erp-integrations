@@ -11,6 +11,7 @@
   "homepage": "https://bitbucket.org/webcrmdotcom/erp-integrations#readme",
   "scripts": {
     "build": "dotnet build",
-    "generate-webcrm-sdk": "dotnet build --configuration GenerateWebcrmSdk"
+    "generate-webcrm-sdk": "dotnet build --configuration GenerateWebcrmSdk",
+    "test": "dotnet test Api.Test"
   }
 }
