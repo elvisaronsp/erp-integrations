@@ -7,7 +7,7 @@ using Webcrm.Integrations.Synchroniser;
 
 namespace Webcrm.Integrations.Api.Fortnox.Functions
 {
-    public static class InitialSyncFunction
+    public static class InitialSync
     {
         [FunctionName("FortnoxCustomersInitialSyncToWebCrm")]
         public static IActionResult FortnoxCustomersInitialSyncToWebCrm(

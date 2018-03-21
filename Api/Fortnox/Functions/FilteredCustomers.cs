@@ -8,7 +8,7 @@ using Webcrm.Integrations.Synchroniser;
 
 namespace Webcrm.Integrations.Api.Fortnox.Functions
 {
-    public static class FilteredFunctions
+    public static class FilteredCustomers
     {
 
         //TODO RJW Does this need to be async?
