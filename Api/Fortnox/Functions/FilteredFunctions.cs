@@ -4,7 +4,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.WebJobs.Host;
-using Webcrm.Integrations.Fortnox.Connector.Processors;
+using Webcrm.Integrations.Synchroniser;
 
 namespace Webcrm.Integrations.Api.Fortnox.Functions
 {
@@ -19,29 +19,17 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
         {
             log.Info("Function FilteredFunctions called");
 
-            var connector = new FilteredCustomerProcessor();
-            var model = connector.Process();
+            var synchroniser = new FortnoxSynchroniser(
+                log,
+                ApiKeys.B2bTestSystemFullAccessAppToken,
+                ApiKeys.FortnoxAccessToken,
+                ApiKeys.FortnoxClientSecret);
+            var result = synchroniser.GetCustomers();
 
             //We now have a list of ALL filtered customers. 
-            var names = string.Join(", ", model.Select(person => person.Name));
+            var names = string.Join(", ", result.Select(person => person.Name));
             return new OkObjectResult($"FORTNOX CUSTOMERS: {names}.");
         }
-
-        [FunctionName("FortnoxCustomersInitialSyncToWebCrm")]
-        public static IActionResult FortnoxCustomersInitialSyncToWebCrm(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post",
-                Route = "fortnox/customers/inital/sync/to/webcrm")]HttpRequest req, TraceWriter log)
-        {
-            log.Info("Function FilteredFunctions called");
-
-            var connector = new InitialCustomerSyncToWebCrm(log);
-            connector.Process();
-
-            //We now have a list of ALL filtered customers. 
-            //var names = string.Join(", ", model.Select(person => person.Name));
-            return new OkObjectResult($"FORTNOX INITIAL SYNC: Running.");
-        }
-
 
 
     }

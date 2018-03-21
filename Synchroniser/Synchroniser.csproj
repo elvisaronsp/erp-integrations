@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Webcrm.Integrations.Synchroniser</AssemblyName>
+    <RootNamespace>Webcrm.Integrations.Synchroniser</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fortnox.Connector\Fortnox.Connector.csproj" />
+  </ItemGroup>
+
+</Project>
