@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Azure.WebJobs.Host;
-using Webcrm.Integrations.Fortnox.Connector.Models;
-using Webcrm.Integrations.Fortnox.Connector.Processors;
+using Webcrm.Integrations.FortnoxConnector.Models;
+using Webcrm.Integrations.FortnoxConnector.Processors;
 
-namespace Webcrm.Integrations.Fortnox.Connector
+namespace Webcrm.Integrations.FortnoxConnector
 {
     public class FortnoxClient
     {

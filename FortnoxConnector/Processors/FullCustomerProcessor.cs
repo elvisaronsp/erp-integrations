@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
-using Webcrm.Integrations.Fortnox.Connector.Models;
+using Webcrm.Integrations.FortnoxConnector.Models;
 
-namespace Webcrm.Integrations.Fortnox.Connector.Processors
+namespace Webcrm.Integrations.FortnoxConnector.Processors
 {
     public class FullCustomerProcessor
     {

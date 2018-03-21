@@ -1,4 +1,4 @@
-﻿namespace Webcrm.Integrations.Fortnox.Connector
+﻿namespace Webcrm.Integrations.FortnoxConnector
 {
     internal class ApplicationSettings
     {

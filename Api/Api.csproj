@@ -19,7 +19,6 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.9" NoWard="NU1701" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Fortnox.Connector\Fortnox.Connector.csproj" />
     <ProjectReference Include="..\Synchroniser\Synchroniser.csproj" />
     <ProjectReference Include="..\WebcrmConnector\WebcrmConnector.csproj" />
   </ItemGroup>

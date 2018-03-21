@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Webcrm.Integrations.Fortnox.Connector</AssemblyName>
-    <RootNamespace>Webcrm.Integrations.Fortnox.Connector</RootNamespace>
+    <AssemblyName>Webcrm.Integrations.FortnoxConnector</AssemblyName>
+    <RootNamespace>Webcrm.Integrations.FortnoxConnector</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

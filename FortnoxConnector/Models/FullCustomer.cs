@@ -1,5 +1,5 @@
 ﻿
-namespace Webcrm.Integrations.Fortnox.Connector.Models
+namespace Webcrm.Integrations.FortnoxConnector.Models
 {
     //TODO RJW
     //For a full list of available fields see

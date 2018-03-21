@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Azure.WebJobs.Host;
-using Webcrm.Integrations.Fortnox.Connector;
-using Webcrm.Integrations.Fortnox.Connector.Models;
+using Webcrm.Integrations.FortnoxConnector;
+using Webcrm.Integrations.FortnoxConnector.Models;
 
 namespace Webcrm.Integrations.Synchroniser
 {
