@@ -18,7 +18,7 @@ namespace Webcrm.Integrations.Api
             HttpRequest req,
             TraceWriter log
         ) {
-            var client = new WebcrmApiClient("https://api.webcrm.com/");
+            var client = new WebcrmSdk("https://api.webcrm.com/");
 
             var tokensResponse = await client.AuthApiLoginPostAsync(ApiKeys.B2bTestSystemReadOnlyAccessAppToken);
             if (tokensResponse.StatusCode != "200")

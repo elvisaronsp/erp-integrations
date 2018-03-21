@@ -7,9 +7,9 @@ namespace Webcrm.Integrations.WebcrmConnector.RemoteCalls
     {
 
         //TODO RJW like idea of only getting token if we need one!
-        public async Task<WebcrmApiClient> ConnectAsync()
+        public async Task<WebcrmSdk> ConnectAsync()
         {
-            var client = new WebcrmApiClient(ApplicationSettings.WebCrmBaseApiUrl);
+            var client = new WebcrmSdk(ApplicationSettings.WebCrmBaseApiUrl);
 
             var tokensResponse = await client.AuthApiLoginPostAsync(
                 ApplicationSettings.FullAccessAppToken);

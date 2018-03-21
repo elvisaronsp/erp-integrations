@@ -3,7 +3,7 @@ using System.Net.Http.Headers;
 
 namespace Webcrm.Integrations.WebcrmConnector
 {
-    public partial class WebcrmApiClient
+    public partial class WebcrmSdk
     {
         public string AccessToken;
 

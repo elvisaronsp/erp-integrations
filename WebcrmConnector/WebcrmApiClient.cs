@@ -9,12 +9,12 @@ namespace Webcrm.Integrations.WebcrmConnector
     #pragma warning disable // Disable all warnings
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "11.15.4.0 (NJsonSchema v9.10.29.0 (Newtonsoft.Json v9.0.0.0))")]
-    public partial class WebcrmApiClient
+    public partial class WebcrmSdk
     {
         private string _baseUrl = "";
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
 
-        public WebcrmApiClient(string baseUrl)
+        public WebcrmSdk(string baseUrl)
         {
             BaseUrl = baseUrl;
             _settings = new System.Lazy<Newtonsoft.Json.JsonSerializerSettings>(() =>
