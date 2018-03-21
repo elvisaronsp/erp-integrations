@@ -20,7 +20,6 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}.GenerateWebcrmSdk|Any CPU.ActiveCfg = Debug|Any CPU
 		{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2E3797AE-28DC-4AEB-B2AB-755575D5A831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -29,10 +28,12 @@ Global
 		{2E3797AE-28DC-4AEB-B2AB-755575D5A831}.GenerateWebcrmSdk|Any CPU.Build.0 = GenerateWebcrmSdk|Any CPU
 		{2E3797AE-28DC-4AEB-B2AB-755575D5A831}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E3797AE-28DC-4AEB-B2AB-755575D5A831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C75B3E14-6324-429D-9AE1-3492CCFB56F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C75B3E14-6324-429D-9AE1-3492CCFB56F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C75B3E14-6324-429D-9AE1-3492CCFB56F3}.GenerateWebcrmSdk|Any CPU.ActiveCfg = Release|Any CPU
-		{C75B3E14-6324-429D-9AE1-3492CCFB56F3}.GenerateWebcrmSdk|Any CPU.Build.0 = Release|Any CPU
 		{C75B3E14-6324-429D-9AE1-3492CCFB56F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C75B3E14-6324-429D-9AE1-3492CCFB56F3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A3D68539-B7CA-4E90-A30F-57B6392AA201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
