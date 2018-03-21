@@ -1,13 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection.Emit;
+using Webcrm.Integrations.Fortnox.Connector;
+using Webcrm.Integrations.Fortnox.Connector.Models;
 
 namespace Webcrm.Integrations.Synchroniser
 {
     public class FortnoxSynchroniser
     {
-        public FortnoxSynchroniser(string webCrmKey, string fnkey, string fnsecret)
+        private FortnoxClient fortnoxClient;
+
+        public FortnoxSynchroniser(string webCrmKey, 
+            string fortnoxAccessToken, 
+            string fortnoxClientSecret)
         {
-            //SETUP CLIENTS HERE
+            fortnoxClient = new FortnoxClient(fortnoxAccessToken, fortnoxClientSecret);
+            //TODO RJW set up WebCrmClient
             //FortnoxClient fc, WebCrmClient wc
         }
 
@@ -18,6 +26,11 @@ namespace Webcrm.Integrations.Synchroniser
             //get webcrmcustomer
             //update
 
+        }
+
+        public List<FilteredCustomer> GetCustomers()
+        {
+            return fortnoxClient.GetAllCustomers();
         }
     }
 }

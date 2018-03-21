@@ -6,4 +6,8 @@
     <RootNamespace>Webcrm.Integrations.Synchroniser</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Fortnox.Connector\Fortnox.Connector.csproj" />
+  </ItemGroup>
+
 </Project>

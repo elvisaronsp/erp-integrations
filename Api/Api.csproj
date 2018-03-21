@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fortnox.Connector\Fortnox.Connector.csproj" />
+    <ProjectReference Include="..\Synchroniser\Synchroniser.csproj" />
     <ProjectReference Include="..\WebcrmConnector\WebcrmConnector.csproj" />
   </ItemGroup>
   <ItemGroup>
