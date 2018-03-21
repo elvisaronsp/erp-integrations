@@ -3,33 +3,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
-using System;
-using System.Linq;
 using System.Threading.Tasks;
 using Webcrm.Integrations.WebcrmConnector;
 
 namespace Webcrm.Integrations.Api
 {
-    public static class Persons
+    public static class TestWebcrmClient
     {
-        [FunctionName("Persons")]
+        [FunctionName("TestWebcrmClient")]
         public static async Task<IActionResult> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "persons")]
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get")]
             HttpRequest req,
             TraceWriter log
         ) {
-            var client = new WebcrmSdk("https://api.webcrm.com/");
-
-            var tokensResponse = await client.AuthApiLoginPostAsync(ApiKeys.B2bTestSystemReadOnlyAccessAppToken);
-            if (tokensResponse.StatusCode != "200")
-            {
-                throw new ApplicationException($"Error fetching application token. {tokensResponse.StatusCode}: {tokensResponse.Result.ErrorDescription}");
-            }
-
-            client.AccessToken = tokensResponse.Result.AccessToken;
-
-            var personsResponse = await client.PersonsGetAsync(1, 10);
-            string personNames = String.Join(", ", personsResponse.Result.Select(person => person.PersonName));
+            var client = new WebcrmClient(ApiKeys.B2bTestSystemReadOnlyAccessAppToken);
+            string personNames = await client.GetTenPersonNames();
             return new OkObjectResult($"First ten persons: {personNames}.");
         }
     }
