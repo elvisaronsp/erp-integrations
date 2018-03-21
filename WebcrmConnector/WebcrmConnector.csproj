@@ -29,7 +29,7 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.1" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
     <Exec Command="if $(ConfigurationName) == GenerateWebcrmSdk (&#xD;&#xA;  echo Generating webCRM API Client...&#xD;&#xA;  $(NSwagExe_Core20) run nswag.json /input:swagger.json&#xD;&#xA;)" />
   </Target>
 
