@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebcrmConnector", "WebcrmConnector\WebcrmConnector.csproj", "{2E3797AE-28DC-4AEB-B2AB-755575D5A831}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fortnox.Connector", "Fortnox.Connector\Fortnox.Connector.csproj", "{2385F58B-F13F-40DA-90AA-A4F20E6C6592}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fortnox.Connector", "Fortnox.Connector\Fortnox.Connector.csproj", "{2385F58B-F13F-40DA-90AA-A4F20E6C6592}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synchroniser", "Synchroniser\Synchroniser.csproj", "{C75B3E14-6324-429D-9AE1-3492CCFB56F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,12 @@ Global
 		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.GenerateWebcrmSdk|Any CPU.Build.0 = Debug|Any CPU
 		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C75B3E14-6324-429D-9AE1-3492CCFB56F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C75B3E14-6324-429D-9AE1-3492CCFB56F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C75B3E14-6324-429D-9AE1-3492CCFB56F3}.GenerateWebcrmClient|Any CPU.ActiveCfg = Debug|Any CPU
+		{C75B3E14-6324-429D-9AE1-3492CCFB56F3}.GenerateWebcrmClient|Any CPU.Build.0 = Debug|Any CPU
+		{C75B3E14-6324-429D-9AE1-3492CCFB56F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C75B3E14-6324-429D-9AE1-3492CCFB56F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

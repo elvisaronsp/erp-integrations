@@ -19,11 +19,12 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
         {
             log.Info("Function FilteredFunctions called");
 
-            var connector = new FilteredCustomerProcessor();
-            var model = connector.Process();
+            var synchroniser = new FortnoxSynchroniser(key1,key2,key3);
+            var result = synchroniser.DOMYWORK();
+
 
             //We now have a list of ALL filtered customers. 
-            var names = string.Join(", ", model.Select(person => person.Name));
+            var names = string.Join(", ", result.Select(person => person.Name));
             return new OkObjectResult($"FORTNOX CUSTOMERS: {names}.");
         }
 
@@ -34,8 +35,12 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
         {
             log.Info("Function FilteredFunctions called");
 
-            var connector = new InitialCustomerSyncToWebCrm(log);
-            connector.Process();
+            //HACK HERE
+            var synchroniser = new FortnoxSynchroniser(key1, key2, key3);
+            //BUG 
+            synchroniser.InitialSync();
+            //var connector = new InitialCustomerSyncToWebCrm(log);
+            //connector.Process();
 
             //We now have a list of ALL filtered customers. 
             //var names = string.Join(", ", model.Select(person => person.Name));
