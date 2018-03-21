@@ -34,8 +34,9 @@ namespace Webcrm.Integrations.FortnoxConnector
             var list = new List<FullCustomer>();
             foreach (var filteredCustomer in GetAllFilteredCustomers())
             {
-                list.Add(fullCustomerList.Process(filteredCustomer.CustomerNumber));
-                logger.Info("HERE!");
+                var customer = fullCustomerList.Process(filteredCustomer.CustomerNumber);
+                list.Add(customer);
+                logger.Info($"{customer.CustomerNumber} - {customer.Name}");
             }
 
             return list;

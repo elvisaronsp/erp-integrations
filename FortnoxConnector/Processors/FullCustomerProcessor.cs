@@ -35,10 +35,13 @@ namespace Webcrm.Integrations.FortnoxConnector.Processors
                 Method.GET);
             var response = client.Execute(request);
 
-            return JsonConvert.DeserializeObject<FullCustomer>(response.Content);
+            //Fortnox returns a json in the format where we have a customer object
+            return JsonConvert
+                .DeserializeObject<FortnoxCustomer>(response.Content)
+                .Customer;  
         }
-
 
 
     }
 }
+
