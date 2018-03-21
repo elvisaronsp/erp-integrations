@@ -5,32 +5,32 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebcrmApi", "WebcrmApi\WebcrmApi.csproj", "{2E3797AE-28DC-4AEB-B2AB-755575D5A831}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebcrmConnector", "WebcrmConnector\WebcrmConnector.csproj", "{2E3797AE-28DC-4AEB-B2AB-755575D5A831}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fortnox.Connector", "Fortnox.Connector\Fortnox.Connector.csproj", "{2385F58B-F13F-40DA-90AA-A4F20E6C6592}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		GenerateWebcrmClient|Any CPU = GenerateWebcrmClient|Any CPU
+		GenerateWebcrmSdk|Any CPU = GenerateWebcrmSdk|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}.GenerateWebcrmClient|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}.GenerateWebcrmSdk|Any CPU.ActiveCfg = Debug|Any CPU
 		{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2E3797AE-28DC-4AEB-B2AB-755575D5A831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2E3797AE-28DC-4AEB-B2AB-755575D5A831}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E3797AE-28DC-4AEB-B2AB-755575D5A831}.GenerateWebcrmClient|Any CPU.ActiveCfg = GenerateWebcrmClient|Any CPU
-		{2E3797AE-28DC-4AEB-B2AB-755575D5A831}.GenerateWebcrmClient|Any CPU.Build.0 = GenerateWebcrmClient|Any CPU
+		{2E3797AE-28DC-4AEB-B2AB-755575D5A831}.GenerateWebcrmSdk|Any CPU.ActiveCfg = GenerateWebcrmSdk|Any CPU
+		{2E3797AE-28DC-4AEB-B2AB-755575D5A831}.GenerateWebcrmSdk|Any CPU.Build.0 = GenerateWebcrmSdk|Any CPU
 		{2E3797AE-28DC-4AEB-B2AB-755575D5A831}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E3797AE-28DC-4AEB-B2AB-755575D5A831}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.GenerateWebcrmClient|Any CPU.ActiveCfg = Debug|Any CPU
-		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.GenerateWebcrmClient|Any CPU.Build.0 = Debug|Any CPU
+		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.GenerateWebcrmSdk|Any CPU.ActiveCfg = Debug|Any CPU
+		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.GenerateWebcrmSdk|Any CPU.Build.0 = Debug|Any CPU
 		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2385F58B-F13F-40DA-90AA-A4F20E6C6592}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

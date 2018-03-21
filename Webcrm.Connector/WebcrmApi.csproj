@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Webcrm.Integrations.WebcrmApi</AssemblyName>
-    <RootNamespace>Webcrm.Integrations.WebcrmApi</RootNamespace>
-    <Configurations>Debug;Release;GenerateWebcrmClient</Configurations>
+    <AssemblyName>Webcrm.Integrations.Webcrm.Connector</AssemblyName>
+    <RootNamespace>Webcrm.Integrations.Webcrm.Connector</RootNamespace>
+    <Configurations>Debug;Release;GenerateWebcrmSdk</Configurations>
     <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
 
@@ -13,7 +13,7 @@
     <WarningsAsErrors />
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GenerateWebcrmClient|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GenerateWebcrmSdk|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
   </PropertyGroup>
@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if $(ConfigurationName) == GenerateWebcrmClient (&#xD;&#xA;  echo Generating webCRM API Client...&#xD;&#xA;  $(NSwagExe_Core20) run nswag.json /input:swagger.json&#xD;&#xA;)" />
+    <Exec Command="if $(ConfigurationName) == GenerateWebcrmSdk (&#xD;&#xA;  echo Generating webCRM API Client...&#xD;&#xA;  $(NSwagExe_Core20) run nswag.json /input:swagger.json&#xD;&#xA;)" />
   </Target>
 
 </Project>

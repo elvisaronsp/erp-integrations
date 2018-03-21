@@ -1,0 +1,16 @@
+{
+  "name": "erp-integrations",
+  "version": "1.0.0",
+  "description": "Integration to webCRM, starting with ERP systems.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://janaagaard@bitbucket.org/webcrmdotcom/erp-integrations.git"
+  },
+  "author": "webCRM",
+  "license": "UNLICENCED",
+  "homepage": "https://bitbucket.org/webcrmdotcom/erp-integrations#readme",
+  "scripts": {
+    "build": "dotnet build",
+    "generate-webcrm-sdk": "dotnet build --configuration GenerateWebcrmSdk"
+  }
+}

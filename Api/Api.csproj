@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fortnox.Connector\Fortnox.Connector.csproj" />
-    <ProjectReference Include="..\WebcrmApi\WebcrmApi.csproj" />
+    <ProjectReference Include="..\WebcrmConnector\WebcrmConnector.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">

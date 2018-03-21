@@ -1,9 +1,9 @@
 ﻿using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace Webcrm.Integrations.WebcrmApi
+namespace Webcrm.Integrations.WebcrmConnector
 {
-    public partial class WebcrmApiClient
+    public partial class WebcrmSdk
     {
         public string AccessToken;
 
