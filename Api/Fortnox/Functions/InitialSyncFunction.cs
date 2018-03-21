@@ -16,15 +16,15 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
         {
             log.Info("Function FilteredFunctions called");
 
-            Synchroniser.InitialCustomerSync();
+            var synchroniser = new FortnoxSynchroniser(
+                    log,
+                ApiKeys.B2bTestSystemFullAccessAppToken,
+                ApiKeys.FortnoxAccessToken,
+                ApiKeys.FortnoxClientSecret);
+
+            synchroniser.InitialCustomerSync();
             return new OkObjectResult($"FORTNOX INITIAL SYNC: Running....");
         }
-
-        //TODO RJW normally I woudl use a base class
-        private static FortnoxSynchroniser Synchroniser => new FortnoxSynchroniser(
-            ApiKeys.B2bTestSystemFullAccessAppToken,
-            ApiKeys.FortnoxAccessToken,
-            ApiKeys.FortnoxClientSecret);
 
 
     }

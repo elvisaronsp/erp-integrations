@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.Azure.WebJobs.Host;
 using Webcrm.Integrations.Fortnox.Connector;
 using Webcrm.Integrations.Fortnox.Connector.Models;
 
@@ -6,15 +7,18 @@ namespace Webcrm.Integrations.Synchroniser
 {
     public class FortnoxSynchroniser
     {
+        private readonly TraceWriter logger;
         private readonly FortnoxClient fortnoxClient;
 
         public FortnoxSynchroniser(
+            TraceWriter logger,
             string webCrmKey,
             string fortnoxAccessToken,
             string fortnoxClientSecret)
         {
+            this.logger = logger;
             fortnoxClient =
-                new FortnoxClient(fortnoxAccessToken, fortnoxClientSecret);
+                new FortnoxClient(logger, fortnoxAccessToken, fortnoxClientSecret);
 
             //TODO RJW set up WebCrmClient
         }

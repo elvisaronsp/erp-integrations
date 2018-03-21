@@ -19,19 +19,17 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
         {
             log.Info("Function FilteredFunctions called");
 
-            var result = Synchroniser.GetCustomers();
+            var synchroniser = new FortnoxSynchroniser(
+                log,
+                ApiKeys.B2bTestSystemFullAccessAppToken,
+                ApiKeys.FortnoxAccessToken,
+                ApiKeys.FortnoxClientSecret);
+            var result = synchroniser.GetCustomers();
 
             //We now have a list of ALL filtered customers. 
             var names = string.Join(", ", result.Select(person => person.Name));
             return new OkObjectResult($"FORTNOX CUSTOMERS: {names}.");
         }
-
-
-        //TODO RJW normally I woudl use a base class
-        private static FortnoxSynchroniser Synchroniser => new FortnoxSynchroniser(
-                ApiKeys.B2bTestSystemFullAccessAppToken,
-                ApiKeys.FortnoxAccessToken,
-                ApiKeys.FortnoxClientSecret);
 
 
     }
