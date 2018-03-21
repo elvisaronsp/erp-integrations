@@ -1,23 +1,23 @@
-using FortnoxAPILibrary;
-using FortnoxAPILibrary.Connectors;
+//using FortnoxAPILibrary;
+//using FortnoxAPILibrary.Connectors;
 
-namespace Webcrm.Integrations.Fortnox.Connector.RemoteCalls
-{
-    internal class GetCustomer
-    {
+//namespace Webcrm.Integrations.Fortnox.Connector.RemoteCalls
+//{
+//    internal class GetCustomer
+//    {
 
-        public Customer Get(string customerNumber)
-        {
-            var connector = new CustomerConnector
-            {
-                AccessToken = ApplicationSettings.FortnoxAccessToken,
-                ClientSecret = ApplicationSettings.FortnoxClientSecret
-            };
+//        public Customer Get(string customerNumber)
+//        {
+//            var connector = new CustomerConnector
+//            {
+//                AccessToken = ApplicationSettings.FortnoxAccessToken,
+//                ClientSecret = ApplicationSettings.FortnoxClientSecret
+//            };
 
-            //logger.Debug($"Getting customer {customerNumber}");
+//            //logger.Debug($"Getting customer {customerNumber}");
 
-            var customer = connector.Get(customerNumber);
-            return customer;
-        }
-    }
-}
+//            var customer = connector.Get(customerNumber);
+//            return customer;
+//        }
+//    }
+//}

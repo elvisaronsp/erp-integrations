@@ -22,7 +22,6 @@ namespace Webcrm.Integrations.Fortnox.Connector.RemoteCalls
             request.AddHeader("access-token", accessToken);
             request.AddHeader("client-secret", clientSecret);
             request.AddHeader("Accept", "application/json");
-            //request.RequestFormat = DataFormat.Json;
             return request;
         }
 
