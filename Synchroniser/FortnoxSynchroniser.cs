@@ -19,7 +19,7 @@ namespace Webcrm.Integrations.Synchroniser
             //FortnoxClient fc, WebCrmClient wc
         }
 
-        public void InitialSync()
+        public void InitialCustomerSync()
         {
             //fn get clients
             //for each
