@@ -11,13 +11,12 @@ namespace Webcrm.Integrations.WebcrmConnector
             ApiKey = apiKey;
         }
 
-        private const string apiUrl = "https://api.webcrm.com/";
 
         private string ApiKey { get;set; }
 
         public async Task<string> GetTenPersonNames()
         {
-            var client = new WebcrmSdk(apiUrl);
+            var client = new WebcrmSdk(ApplicationSettings.WebCrmBaseApiUrl);
             var tokensResponse = await client.AuthApiLoginPostAsync(ApiKey);
             if (tokensResponse.StatusCode != "200")
             {
