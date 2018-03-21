@@ -15,14 +15,25 @@ namespace Webcrm.Integrations.Fortnox.Connector
             this.clientSecret = clientSecret;
         }
 
-        public List<FilteredCustomer> GetAllCustomers()
+        public List<FilteredCustomer> GetAllFilteredCustomers()
         {
             return new FilteredCustomerProcessor(accessToken, clientSecret)
                 .Process();
         }
 
 
+        public List<FullCustomer> GetAllFullCustomers()
+        {
+            var fullCustomerList = new FullCustomerProcessor(accessToken, clientSecret);
 
+            var list = new List<FullCustomer>();
+            foreach (var filteredCustomer in GetAllFilteredCustomers())
+            {
+                list.Add(fullCustomerList.Process(filteredCustomer.CustomerNumber));
+            }
+
+            return list;
+        }
     }
 
 }

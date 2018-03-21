@@ -7,6 +7,7 @@ namespace Webcrm.Integrations.Fortnox.Connector.Processors
 {
     public class FilteredCustomerProcessor
     {
+        //TODO RJW base class?
         private readonly string accessToken;
         private readonly string clientSecret;
 
@@ -34,7 +35,6 @@ namespace Webcrm.Integrations.Fortnox.Connector.Processors
 
         public List<FilteredCustomer> Process()
         {
-            //var filter = new FilteredCustomers();
             var allCustomers = new List<FilteredCustomer>();
 
             //We need to do paging as there is a limit on number of customers
