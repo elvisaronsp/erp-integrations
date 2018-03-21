@@ -6,7 +6,7 @@ using Microsoft.Azure.WebJobs.Host;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Webcrm.Integrations.WebcrmApi;
+using Webcrm.Integrations.WebcrmConnector;
 
 namespace Webcrm.Integrations.Api
 {

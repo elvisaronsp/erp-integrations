@@ -39,7 +39,7 @@
       "handleReferences": false,
       "httpClientType": "System.Net.Http.HttpClient",
       "injectHttpClient": false,
-      "namespace": "Webcrm.Integrations.WebcrmApi",
+      "namespace": "Webcrm.Integrations.WebcrmConnector",
       "operationGenerationMode": "MultipleClientsFromOperationId",
       "output": "WebcrmApiClient.cs",
       "parameterArrayType": "System.Collections.Generic.IEnumerable",

@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Webcrm.Integrations.WebcrmApi</AssemblyName>
-    <RootNamespace>Webcrm.Integrations.WebcrmApi</RootNamespace>
+    <AssemblyName>Webcrm.Integrations.WebcrmConnector</AssemblyName>
+    <RootNamespace>Webcrm.Integrations.WebcrmConnector</RootNamespace>
     <Configurations>Debug;Release;GenerateWebcrmClient</Configurations>
     <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>

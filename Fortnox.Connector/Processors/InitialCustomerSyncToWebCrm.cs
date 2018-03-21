@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Azure.WebJobs.Host;
 using Webcrm.Integrations.Fortnox.Connector.RemoteCalls;
-using Webcrm.Integrations.WebcrmApi.RemoteCalls;
+using Webcrm.Integrations.WebcrmConnector.RemoteCalls;
 
 namespace Webcrm.Integrations.Fortnox.Connector.Processors
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Webcrm.Integrations.WebcrmApi.RemoteCalls
+namespace Webcrm.Integrations.WebcrmConnector.RemoteCalls
 {
     public class Base
     {

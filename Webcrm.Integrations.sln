@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{98F9D4F3-51D0-42AE-B8F1-8C8D763685DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebcrmApi", "WebcrmApi\WebcrmApi.csproj", "{2E3797AE-28DC-4AEB-B2AB-755575D5A831}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebcrmConnector", "WebcrmConnector\WebcrmConnector.csproj", "{2E3797AE-28DC-4AEB-B2AB-755575D5A831}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fortnox.Connector", "Fortnox.Connector\Fortnox.Connector.csproj", "{2385F58B-F13F-40DA-90AA-A4F20E6C6592}"
 EndProject
