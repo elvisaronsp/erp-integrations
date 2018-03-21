@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Webcrm.Integrations.WebcrmConnector</AssemblyName>
-    <RootNamespace>Webcrm.Integrations.WebcrmConnector</RootNamespace>
+    <AssemblyName>Webcrm.Integrations.Webcrm.Connector</AssemblyName>
+    <RootNamespace>Webcrm.Integrations.Webcrm.Connector</RootNamespace>
     <Configurations>Debug;Release;GenerateWebcrmSdk</Configurations>
     <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>

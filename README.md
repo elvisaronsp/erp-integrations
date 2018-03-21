@@ -11,7 +11,12 @@
 
     dotnet build
     dotnet build --configuration Release
-    dotnet build --configuration GenerateWebcrmClient
+
+## Generate webCRM SDK
+
+This updates `WebcrmConnector/WebcrmSdk.cs`.
+
+    dotnet build --configuration GenerateWebcrmSdk
 
 ## Running
 
@@ -19,13 +24,13 @@ Run the following command in the folder `/Api/bin/Debug/netstandard2.0`.
 
     func host start
 
-## Publishing
+## Publish From the Command Line
 
 Run the following command in the folder `/Api/bin/Release/netstandard2.0`.
 
     func azure functionapp publish erp-integrations
 
-## Publishing
+## Publish From Visual Studio
 
 In Visual Studio Code: F1 > Run Task > Publish to Azure.
 
