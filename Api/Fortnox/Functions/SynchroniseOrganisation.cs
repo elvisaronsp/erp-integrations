@@ -16,7 +16,7 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
         FortnoxClientSecret: ...
         WebcrmKey: ...
         FortnoxCustomerNumber: ...
-        WebCrmSyncCustomField: ...
+        WebcrmSyncCustomField: ...
     }*/
     public static class SynchroniseOrganisation
     {
@@ -38,7 +38,7 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
 
             synchroniser.InitialOrganisationSynchroniser(
                 body.FortnoxCustomerNumber,
-                body.WebCrmSyncCustomField);
+                body.WebcrmSyncCustomField);
             return new OkObjectResult("Function SynchroniseOrganisationFromFortnox ran");
         }
     }

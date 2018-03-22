@@ -12,16 +12,16 @@ namespace Webcrm.Integrations.Synchroniser
         private readonly WebcrmClient webcrmClient;
 
         public FortnoxSynchroniser(TraceWriter logger,
-            string webCrmKey,
+            string webcrmKey,
             string fortnoxAccessToken,
             string fortnoxClientSecret)
         {
             this.logger = logger;
             fortnoxClient = new FortnoxClient(logger, fortnoxAccessToken, fortnoxClientSecret);
-            webcrmClient = new WebcrmClient(webCrmKey);
+            webcrmClient = new WebcrmClient(webcrmKey);
         }
 
-        public void InitialOrganisationSynchroniser(string customerNumber, string webCrmSyncCustomField)
+        public void InitialOrganisationSynchroniser(string customerNumber, string webcrmSyncCustomField)
         {
             //First get the fortnox customer
             var customer = fortnoxClient.GetCustomer(customerNumber);
@@ -32,16 +32,16 @@ namespace Webcrm.Integrations.Synchroniser
 
             logger.Info($"Found and retrieved fortnox customer from {customer.CustomerNumber}");
 
-            //Now get the corresponding WebCrm OrganisationId 
-            var webCrmOrganisationId = webcrmClient.GetSingleOrganisationByCustomField(
-                    webCrmSyncCustomField, customerNumber)
+            //Now get the corresponding webcrm OrganisationId 
+            var webcrmOrganisationId = webcrmClient.GetSingleOrganisationByCustomField(
+                    webcrmSyncCustomField, customerNumber)
                 .Result;
 
             //Lets update the organisation
-            if (webCrmOrganisationId > 0)
+            if (webcrmOrganisationId > 0)
             {
                 var webCrmOrganisation = webcrmClient
-                    .GetOrganisationBySystemId(webCrmOrganisationId)
+                    .GetOrganisationBySystemId(webcrmOrganisationId)
                     .Result;
 
                 //map fortnox customer to webcrm organisation
@@ -66,7 +66,7 @@ namespace Webcrm.Integrations.Synchroniser
             }
 
             //NOTES FOR RJW Now we need to do the following
-            //GET customer from WebCrm BY custom field number
+            //GET customer from webcrm BY custom field number
             // IF customer does not exist then
             //  Get customer by name? by other means
             //   create customer in webcrm

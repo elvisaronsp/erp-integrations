@@ -2,7 +2,7 @@ namespace Webcrm.Integrations.Api.Models
 {
     public class SynchroniseOrganisationBody : ApiKey
     {
-        public string WebCrmSyncCustomField { get; set; }
+        public string WebcrmSyncCustomField { get; set; }
     }
 
     public class ApiKey
