@@ -28,7 +28,7 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
         {
             log.Info("Function SynchroniseOrganisationFromFortnox called");
 
-            var body = await req.Content.ReadAsAsync<ApiKeyDto>();
+            var body = await req.Content.ReadAsAsync<SynchroniseOrganisationBody>();
 
             var synchroniser = new FortnoxSynchroniser(
                 log,
@@ -36,7 +36,9 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
                 body.FortnoxAccessToken,
                 body.FortnoxClientSecret);
 
-            synchroniser.InitialOrganisationSynchroniser(body.FortnoxCustomerNumber);
+            synchroniser.InitialOrganisationSynchroniser(
+                body.FortnoxCustomerNumber,
+                body.WebCrmSyncCustomField);
             return new OkObjectResult("Function SynchroniseOrganisationFromFortnox ran");
         }
     }

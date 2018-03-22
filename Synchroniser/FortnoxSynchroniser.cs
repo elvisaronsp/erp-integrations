@@ -8,8 +8,7 @@ namespace Webcrm.Integrations.Synchroniser
         private readonly TraceWriter logger;
         private readonly FortnoxClient fortnoxClient;
 
-        public FortnoxSynchroniser(
-            TraceWriter logger,
+        public FortnoxSynchroniser(TraceWriter logger,
             string webCrmKey,
             string fortnoxAccessToken,
             string fortnoxClientSecret)
@@ -22,7 +21,7 @@ namespace Webcrm.Integrations.Synchroniser
         }
 
         //TODO RJW Talk Jen about error trapping etc
-        public void InitialOrganisationSynchroniser(string customerNumber)
+        public void InitialOrganisationSynchroniser(string customerNumber, string webCrmSyncCustomField)
         {
             var customer = fortnoxClient.GetCustomer(customerNumber);
             logger.Info($"Found and retrieved fortnox customer from {customer.CustomerNumber}");
