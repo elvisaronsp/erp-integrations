@@ -3,9 +3,13 @@ using Newtonsoft.Json;
 using RestSharp;
 using Webcrm.Integrations.FortnoxConnector.Models;
 
-namespace Webcrm.Integrations.FortnoxConnector.Processors
+namespace Webcrm.Integrations.FortnoxConnector
 {
-    public class FilteredCustomerProcessor
+    /// <summary>
+    /// NOTE: When we do any kind of querying for customers we get a subset of the 
+    ///   full customer. 
+    /// </summary>
+    public class FilteredCustomerRetriever
     {
         private readonly string accessToken;
         private readonly string clientSecret;
@@ -23,12 +27,15 @@ namespace Webcrm.Integrations.FortnoxConnector.Processors
             return request;
         }
 
-        public FilteredCustomerProcessor(string accessToken, string clientSecret)
+        public FilteredCustomerRetriever(string accessToken, string clientSecret)
         {
             this.accessToken = accessToken;
             this.clientSecret = clientSecret;
         }
 
+        //TODO RHW we need to add in a date last updated here. So we can
+        //  get a list of filtered customers who have been created or updated
+        //  from fortnox since a given date/time
         public List<FilteredCustomer> Process()
         {
             var allCustomers = new List<FilteredCustomer>();

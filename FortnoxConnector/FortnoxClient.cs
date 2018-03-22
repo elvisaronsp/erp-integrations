@@ -1,6 +1,5 @@
 ﻿using Microsoft.Azure.WebJobs.Host;
 using Webcrm.Integrations.FortnoxConnector.Models;
-using Webcrm.Integrations.FortnoxConnector.Processors;
 
 namespace Webcrm.Integrations.FortnoxConnector
 {
@@ -22,7 +21,7 @@ namespace Webcrm.Integrations.FortnoxConnector
         public Customer GetCustomer(string customerNumber)
         {
             logger.Info($"Called GetCustomer with customerNumber {customerNumber}");
-            var customer = new CustomerProcessor(accessToken, clientSecret);
+            var customer = new CustomerRetriever(accessToken, clientSecret);
             return customer.Process(customerNumber);
         }
     }
