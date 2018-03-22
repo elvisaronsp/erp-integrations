@@ -3,8 +3,6 @@ using Newtonsoft.Json;
 
 namespace Webcrm.Integrations.FortnoxConnector.Models
 {
-
-    //TODO RJW
     //For a full list of available fields see
     //https://github.com/FortnoxAB/csharp-api-sdk/blob/master/FortnoxAPILibrary/Entities/Customer.cs
     //https://developer.fortnox.se/documentation/resources/customers/
@@ -40,5 +38,4 @@ namespace Webcrm.Integrations.FortnoxConnector.Models
     {
         public Customer Customer { get; set; }
     }
-
 }

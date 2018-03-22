@@ -21,7 +21,6 @@ namespace Webcrm.Integrations.Synchroniser
             webcrmClient = new WebcrmClient(webCrmKey);
         }
 
-        //TODO RJW Talk Jen about error trapping etc
         public void InitialOrganisationSynchroniser(string customerNumber, string webCrmSyncCustomField)
         {
             //First get the fortnox customer

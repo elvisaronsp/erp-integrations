@@ -6,7 +6,6 @@ namespace Webcrm.Integrations.FortnoxConnector
 {
     public class CustomerRetriever
     {
-        //TODO RJW base class?
         private readonly string accessToken;
         private readonly string clientSecret;
 
