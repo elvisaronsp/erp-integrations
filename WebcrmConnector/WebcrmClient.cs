@@ -14,8 +14,7 @@ namespace Webcrm.Integrations.WebcrmConnector
             ApiKey = apiKey;
         }
 
-
-        private string ApiKey { get;set; }
+        private string ApiKey { get; }
 
         public async Task<string> GetTenPersonNames()
         {
@@ -37,8 +36,7 @@ namespace Webcrm.Integrations.WebcrmConnector
             var organisationResult = await client.QueriesGetAsync(
                 selectOrganisationByCustomField, 1, 1);
 
-            //An organisation could not be found with the correct 
-            //  fortnox Key. Therefore we will return 0
+            // An organisation could not be found with the correct Fortnox key. Therefore we will return 0.
             if (organisationResult.Result.Count == 0)
             {
                 return 0;
