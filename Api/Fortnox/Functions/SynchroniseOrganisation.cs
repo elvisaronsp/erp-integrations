@@ -23,8 +23,8 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
         //Notice the trigger was changed from HttpRequest to HttpRequestMessage
         [FunctionName("SynchroniseOrganisationFromFortnox")]
         public static async Task<IActionResult> FromFortnox(
-            [HttpTrigger(AuthorizationLevel.Function, "put",
-                Route = "SynchroniseOrganisationFromFortnox")]HttpRequestMessage req, TraceWriter log)
+            [HttpTrigger(AuthorizationLevel.Function, "put")]
+            HttpRequestMessage req, TraceWriter log)
         {
             log.Info("Function SynchroniseOrganisationFromFortnox called");
 
