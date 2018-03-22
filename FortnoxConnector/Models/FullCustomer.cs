@@ -1,7 +1,5 @@
-﻿
-namespace Webcrm.Integrations.FortnoxConnector.Models
+﻿namespace Webcrm.Integrations.FortnoxConnector.Models
 {
-
     public class FortnoxCustomer
     {
         public FullCustomer Customer { get; set; }

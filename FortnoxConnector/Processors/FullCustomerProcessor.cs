@@ -40,8 +40,5 @@ namespace Webcrm.Integrations.FortnoxConnector.Processors
                 .DeserializeObject<FortnoxCustomer>(response.Content)
                 .Customer;  
         }
-
-
     }
 }
-

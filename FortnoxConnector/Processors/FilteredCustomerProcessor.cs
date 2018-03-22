@@ -7,7 +7,6 @@ namespace Webcrm.Integrations.FortnoxConnector.Processors
 {
     public class FilteredCustomerProcessor
     {
-        //TODO RJW base class?
         private readonly string accessToken;
         private readonly string clientSecret;
 
@@ -24,14 +23,11 @@ namespace Webcrm.Integrations.FortnoxConnector.Processors
             return request;
         }
 
-
-
         public FilteredCustomerProcessor(string accessToken, string clientSecret)
         {
             this.accessToken = accessToken;
             this.clientSecret = clientSecret;
         }
-
 
         public List<FilteredCustomer> Process()
         {
@@ -68,8 +64,5 @@ namespace Webcrm.Integrations.FortnoxConnector.Processors
 
             return JsonConvert.DeserializeObject<FilteredCustomersModel>(response.Content);
         }
-
-
-
     }
 }

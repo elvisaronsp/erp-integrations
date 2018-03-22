@@ -26,7 +26,6 @@ namespace Webcrm.Integrations.FortnoxConnector
                 .Process();
         }
 
-
         public List<FullCustomer> GetAllFullCustomers()
         {
             var fullCustomerList = new FullCustomerProcessor(accessToken, clientSecret);
@@ -42,5 +41,4 @@ namespace Webcrm.Integrations.FortnoxConnector
             return list;
         }
     }
-
 }
