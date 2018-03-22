@@ -10,7 +10,7 @@ namespace Webcrm.Integrations.Api.Test
         public void GetFirstTenPeolpleReturnsTenNames()
         {
             var client = new RestClient("http://localhost:7071/");
-            var request = new RestRequest("api/TestWebcrmClient");
+            var request = new RestRequest("Api/TestWebcrmClient");
             var response = client.Execute(request);
             string[] personNames = response.Content.Split(",");
 

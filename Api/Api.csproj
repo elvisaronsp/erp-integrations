@@ -16,7 +16,7 @@
     <WarningsAsErrors />
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.9" NoWard="NU1701" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.10" NoWard="NU1701" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Synchroniser\Synchroniser.csproj" />
