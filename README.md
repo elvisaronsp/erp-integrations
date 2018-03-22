@@ -14,7 +14,7 @@
 
 ## Generate webCRM SDK
 
-This updates `WebcrmConnector/WebcrmSdk.cs`.
+Update the webCRM SDK, `WebcrmConnector/WebcrmSdk.cs`. The command is ignored if the OS isn't Windows.
 
     dotnet build --configuration GenerateWebcrmSdk
 
