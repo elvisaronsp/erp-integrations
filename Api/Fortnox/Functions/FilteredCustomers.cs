@@ -10,7 +10,6 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
 {
     public static class FilteredCustomers
     {
-
         //TODO RJW Does this need to be async?
         [FunctionName("FortnoxCustomersFilteredAll")]
         public static IActionResult FortnoxCustomersFilteredAll(
@@ -30,7 +29,5 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
             var names = string.Join(", ", result.Select(person => person.Name));
             return new OkObjectResult($"FORTNOX CUSTOMERS: {names}.");
         }
-
-
     }
 }

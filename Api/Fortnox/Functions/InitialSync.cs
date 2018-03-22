@@ -25,7 +25,5 @@ namespace Webcrm.Integrations.Api.Fortnox.Functions
             synchroniser.InitialCustomerSync();
             return new OkObjectResult($"FORTNOX INITIAL SYNC: Running....");
         }
-
-
     }
 }
