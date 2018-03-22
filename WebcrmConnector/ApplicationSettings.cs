@@ -1,4 +1,4 @@
-﻿namespace Webcrm.Integrations.WebcrmConnector
+namespace Webcrm.Integrations.WebcrmConnector
 {
     class ApplicationSettings
     {

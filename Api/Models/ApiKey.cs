@@ -1,4 +1,4 @@
-﻿namespace Webcrm.Integrations.Api.Models
+namespace Webcrm.Integrations.Api.Models
 {
     public class SynchroniseOrganisationBody : ApiKey
     {

@@ -1,4 +1,4 @@
-﻿using Microsoft.Azure.WebJobs.Host;
+using Microsoft.Azure.WebJobs.Host;
 using Webcrm.Integrations.FortnoxConnector.Models;
 
 namespace Webcrm.Integrations.FortnoxConnector
