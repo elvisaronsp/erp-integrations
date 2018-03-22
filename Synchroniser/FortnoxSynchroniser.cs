@@ -1,7 +1,5 @@
-using System.Collections.Generic;
-using Microsoft.Azure.WebJobs.Host;
+﻿using Microsoft.Azure.WebJobs.Host;
 using Webcrm.Integrations.FortnoxConnector;
-using Webcrm.Integrations.FortnoxConnector.Models;
 
 namespace Webcrm.Integrations.Synchroniser
 {
@@ -23,19 +21,19 @@ namespace Webcrm.Integrations.Synchroniser
             //TODO RJW set up WebCrmClient
         }
 
-        public void InitialCustomerSync()
+        //TODO RJW Talk Jen about error trapping etc
+        public void InitialOrganisationSynchroniser(string customerNumber)
         {
-            var customerList = fortnoxClient.GetAllFullCustomers();
-            foreach (var customer in customerList)
-            {
-                //TODO RJW we need to do the following
-                //GET customer from WebCrm BY custom field number
-                // IF customer does not exist then
-                //  Get customer by name? by other means
-                //   create customer in webcrm
-                // ELSE
-                //   update customer in webcrm
-            }
+            var customer = fortnoxClient.GetCustomer(customerNumber);
+            logger.Info($"Found and retrieved fortnox customer from {customer.CustomerNumber}");
+
+            //Now we need to do the following
+            //GET customer from WebCrm BY custom field number
+            // IF customer does not exist then
+            //  Get customer by name? by other means
+            //   create customer in webcrm
+            // ELSE
+            //   update customer in webcrm
         }
     }
 }
