@@ -56,7 +56,7 @@ namespace Webcrm.Integrations.FortnoxConnector
             return allCustomers;
         }
 
-        private FilteredCustomersModel Get(int page)
+        private FilteredCustomers Get(int page)
         {
             const int limit = ApplicationSettings.FortnoxPageLimit;
 
@@ -69,7 +69,7 @@ namespace Webcrm.Integrations.FortnoxConnector
                 Method.GET);
             var response = client.Execute(request);
 
-            return JsonConvert.DeserializeObject<FilteredCustomersModel>(response.Content);
+            return JsonConvert.DeserializeObject<FilteredCustomers>(response.Content);
         }
     }
 }

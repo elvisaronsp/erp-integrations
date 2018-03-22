@@ -3,7 +3,11 @@ using Newtonsoft.Json;
 
 namespace Webcrm.Integrations.FortnoxConnector.Models
 {
-    public class FilteredCustomersModel
+    //Filertered customers are returned to us when we do any kind
+    //  of search. When we query fortnox API for records they return
+    //  us a subset of the actual customer record. 
+    //The key field we then use to look up a full customer is CustomerNumber
+    public class FilteredCustomers
     {
         public MetaInformation MetaInformation { get; set; }
         public List<FilteredCustomer> Customers { get; set; }
