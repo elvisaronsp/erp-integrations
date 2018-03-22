@@ -52,6 +52,20 @@ namespace Webcrm.Integrations.WebcrmConnector
             return organisation.OrganisationId;
         }
 
+        public async Task<OrganisationDto> GetOrganisationBySystemId(int webCrmOrganisationId)
+        {
+            var client = await Connect();
+            var response = await client.OrganisationsByIdGetAsync(webCrmOrganisationId);
+            return response.Result;
+        }
+
+        public async  Task SaveOrganisation(OrganisationDto webCrmOrganisation)
+        {
+            var client = await Connect();
+            await client.OrganisationsByIdPutAsync(
+                webCrmOrganisation.OrganisationId, webCrmOrganisation);
+        }
+
         private async Task<WebcrmSdk> Connect()
         {
             var client = new WebcrmSdk(ApplicationSettings.WebCrmBaseApiUrl);
