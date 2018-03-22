@@ -32,9 +32,7 @@ namespace Webcrm.Integrations.WebcrmConnector
         {
             var client = await Connect();
 
-            var selectOrganisationByCustomField = $@"SELECT OrganisationId 
-                        FROM organisation
-                        WHERE {customField} = '{value}'";
+            var selectOrganisationByCustomField = $@"SELECT OrganisationId FROM organisation WHERE {customField} = '{value}'";
 
             var organisationResult = await client.QueriesGetAsync(
                 selectOrganisationByCustomField, 1, 1);
