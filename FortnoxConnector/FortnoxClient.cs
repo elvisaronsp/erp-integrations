@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Microsoft.Azure.WebJobs.Host;
+﻿using Microsoft.Azure.WebJobs.Host;
 using Webcrm.Integrations.FortnoxConnector.Models;
 using Webcrm.Integrations.FortnoxConnector.Processors;
 
@@ -20,25 +19,11 @@ namespace Webcrm.Integrations.FortnoxConnector
             this.clientSecret = clientSecret;
         }
 
-        public List<FilteredCustomer> GetAllFilteredCustomers()
+        public Customer GetCustomer(string customerNumber)
         {
-            return new FilteredCustomerProcessor(accessToken, clientSecret)
-                .Process();
-        }
-
-        public List<FullCustomer> GetAllFullCustomers()
-        {
-            var fullCustomerList = new FullCustomerProcessor(accessToken, clientSecret);
-
-            var list = new List<FullCustomer>();
-            foreach (var filteredCustomer in GetAllFilteredCustomers())
-            {
-                var customer = fullCustomerList.Process(filteredCustomer.CustomerNumber);
-                list.Add(customer);
-                logger.Info($"{customer.CustomerNumber} - {customer.Name}");
-            }
-
-            return list;
+            logger.Info($"Called GetCustomer with customerNumber {customerNumber}");
+            var customer = new CustomerProcessor(accessToken, clientSecret);
+            return customer.Process(customerNumber);
         }
     }
 }

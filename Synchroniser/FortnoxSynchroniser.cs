@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Microsoft.Azure.WebJobs.Host;
 using Webcrm.Integrations.FortnoxConnector;
 using Webcrm.Integrations.FortnoxConnector.Models;
@@ -36,11 +36,6 @@ namespace Webcrm.Integrations.Synchroniser
                 // ELSE
                 //   update customer in webcrm
             }
-        }
-
-        public List<FilteredCustomer> GetCustomers()
-        {
-            return fortnoxClient.GetAllFilteredCustomers();
         }
     }
 }
