@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Webcrm.Integrations.WebcrmConnector.Models;
 
 namespace Webcrm.Integrations.WebcrmConnector
 {
@@ -32,7 +33,7 @@ namespace Webcrm.Integrations.WebcrmConnector
             return personNames;
         }
 
-        public async Task<long> GetSingleOrganisationByCustomField(
+        public async Task<int> GetSingleOrganisationByCustomField(
             string customField,
             string value)
         {
@@ -52,22 +53,17 @@ namespace Webcrm.Integrations.WebcrmConnector
             var organisationResult = await client.QueriesGetAsync(
                 selectOrganisationByCustomField, 1, 1);
 
-            //If we cannot find a organisation then we need to create one
-            //TODO Question JAN do we make a call here OR from the calling 
-            //  method?
+            //An organisation could not be found with the correct 
+            //  fortnox Key. Therefore we will return 0
             if (organisationResult.Result.Count == 0)
             {
                 return 0;
             }
 
-            //TODO Jan is there a better way to extract the OrganisationId here?
-            dynamic jsonResult = JsonConvert.DeserializeObject(
+            var organisation = JsonConvert.DeserializeObject<Organisation>(
                 organisationResult.Result[0].ToString());
 
-            var organisationId =
-                JObject.Parse(jsonResult.ToString())["OrganisationId"];
-
-            return long.Parse(organisationId);
+            return organisation.OrganisationId;
         }
     }
 }
