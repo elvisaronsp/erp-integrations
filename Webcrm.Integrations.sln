@@ -12,7 +12,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FortnoxConnector", "Fortnox
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Test", "Api.Test\Api.Test.csproj", "{076D06E2-143B-4B43-A07D-A569F4CC5F13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Private", "Private\Private.csproj", "{38612902-9F0E-419F-A9B3-5AD0D8E71917}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Private", "Private\Private.csproj", "{38612902-9F0E-419F-A9B3-5AD0D8E71917}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

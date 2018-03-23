@@ -19,7 +19,6 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.10" NoWard="NU1701" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Private\Private.csproj" />
     <ProjectReference Include="..\Synchroniser\Synchroniser.csproj" />
     <ProjectReference Include="..\WebcrmConnector\WebcrmConnector.csproj" />
   </ItemGroup>

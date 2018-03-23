@@ -1,5 +1,6 @@
 using RestSharp;
-using System;
+using Webcrm.Integrations.Api.Models;
+using Webcrm.Integrations.Private;
 using Xunit;
 
 namespace Webcrm.Integrations.Api.Test
@@ -10,7 +11,15 @@ namespace Webcrm.Integrations.Api.Test
         public void GetFirstTenPeolpleReturnsTenNames()
         {
             var client = new RestClient("http://localhost:7071/");
-            var request = new RestRequest("Api/TestWebcrmClient");
+
+            var request = new RestRequest("Api/TestWebcrmClient", Method.POST);
+            request.AddHeader("Content-Type", "application/json");
+            TestWebcrmClientRequestBody body = new TestWebcrmClientRequestBody
+            {
+                WebcrmApplicationToken = ApiKeys.B2bTestSystemReadOnlyAccessAppToken
+            };
+            request.AddJsonBody(body);
+
             var response = client.Execute(request);
             string[] personNames = response.Content.Split(",");
 
