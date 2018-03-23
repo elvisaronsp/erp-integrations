@@ -16,7 +16,7 @@ namespace Webcrm.Integrations.Api.Test
             request.AddHeader("Content-Type", "application/json");
             TestWebcrmClientRequestBody body = new TestWebcrmClientRequestBody
             {
-                WebcrmApplicationToken = ApiKeys.B2bTestSystemReadOnlyAccessAppToken
+                WebcrmApplicationToken = ApiKeys.WebcrmB2bReadOnlyAccessAppToken
             };
             request.AddJsonBody(body);
 
