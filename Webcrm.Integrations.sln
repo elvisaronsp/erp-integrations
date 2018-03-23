@@ -12,6 +12,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FortnoxConnector", "Fortnox
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Test", "Api.Test\Api.Test.csproj", "{076D06E2-143B-4B43-A07D-A569F4CC5F13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Private", "Private\Private.csproj", "{38612902-9F0E-419F-A9B3-5AD0D8E71917}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,12 +51,17 @@ Global
 		{076D06E2-143B-4B43-A07D-A569F4CC5F13}.GenerateWebcrmSdk|Any CPU.Build.0 = Debug|Any CPU
 		{076D06E2-143B-4B43-A07D-A569F4CC5F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{076D06E2-143B-4B43-A07D-A569F4CC5F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38612902-9F0E-419F-A9B3-5AD0D8E71917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38612902-9F0E-419F-A9B3-5AD0D8E71917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38612902-9F0E-419F-A9B3-5AD0D8E71917}.GenerateWebcrmSdk|Any CPU.ActiveCfg = Debug|Any CPU
+		{38612902-9F0E-419F-A9B3-5AD0D8E71917}.GenerateWebcrmSdk|Any CPU.Build.0 = Debug|Any CPU
+		{38612902-9F0E-419F-A9B3-5AD0D8E71917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38612902-9F0E-419F-A9B3-5AD0D8E71917}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		    SolutionGuid = {4B3AF55A-2776-4D67-A8FF-A617A3CF9973}
-		SolutionGuid = {672F7ABF-2A96-4C45-AE3C-2E739A2CAE1F}
+		SolutionGuid = {5150F8C1-A752-4FA5-99DB-09D757736775}
 	EndGlobalSection
 EndGlobal

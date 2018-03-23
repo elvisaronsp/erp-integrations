@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Webcrm.Integrations.Private</AssemblyName>
+    <RootNamespace>Webcrm.Integrations.Private</RootNamespace>
+  </PropertyGroup>
+
+</Project>
