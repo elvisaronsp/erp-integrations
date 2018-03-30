@@ -9,7 +9,8 @@ namespace Webcrm.Integrations.WebcrmConnector
 
         partial void PrepareRequest(HttpClient client, HttpRequestMessage request, string url)
         {
-            if (AccessToken != null) {
+            if (AccessToken != null)
+            {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AccessToken);
             }
         }

@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace Webcrm.Integrations.FortnoxConnector.Models
 {
@@ -18,6 +18,7 @@ namespace Webcrm.Integrations.FortnoxConnector.Models
         public string Postcode { get; set; }
         public string Email { get; set; }
         public string Phone1 { get; set; }
+
         [JsonProperty("WWW")]
         public string Website { get; set; }
 

@@ -12,10 +12,10 @@ namespace Webcrm.Integrations.Api
     {
         [FunctionName("TestWebcrmClient")]
         public static async Task<IActionResult> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get")]
-            HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req,
             TraceWriter log
-        ) {
+        )
+        {
             var client = new WebcrmClient(ApiKeys.B2bTestSystemReadOnlyAccessAppToken);
             string personNames = await client.GetTenPersonNames();
             return new OkObjectResult($"First ten persons: {personNames}.");

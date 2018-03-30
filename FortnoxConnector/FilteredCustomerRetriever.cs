@@ -1,13 +1,13 @@
-using System.Collections.Generic;
 using Newtonsoft.Json;
 using RestSharp;
+using System.Collections.Generic;
 using Webcrm.Integrations.FortnoxConnector.Models;
 
 namespace Webcrm.Integrations.FortnoxConnector
 {
     /// <summary>
-    /// NOTE: When we do any kind of querying for customers we get a subset of the 
-    ///   full customer. 
+    /// NOTE: When we do any kind of querying for customers we get a subset of the
+    ///   full customer.
     /// </summary>
     public class FilteredCustomerRetriever
     {
@@ -61,11 +61,11 @@ namespace Webcrm.Integrations.FortnoxConnector
             const int limit = ApplicationSettings.FortnoxPageLimit;
 
             var request = Request($"customers?" +
-                                  $"filter=active" +
-                                  $"&sortby=customernumber" +
-                                  $"&sortorder=ascending" +
-                                  $"&limit={limit}" +
-                                  $"&page={page}",
+                $"filter=active" +
+                $"&sortby=customernumber" +
+                $"&sortorder=ascending" +
+                $"&limit={limit}" +
+                $"&page={page}",
                 Method.GET);
             var response = client.Execute(request);
 

@@ -37,7 +37,7 @@ namespace Webcrm.Integrations.FortnoxConnector
             //Fortnox returns a json in the format where we have a customer object
             return JsonConvert
                 .DeserializeObject<FortnoxCustomer>(response.Content)
-                .Customer;  
+                .Customer;
         }
     }
 }

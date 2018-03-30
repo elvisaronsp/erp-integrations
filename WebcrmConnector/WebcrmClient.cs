@@ -1,8 +1,8 @@
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using Webcrm.Integrations.WebcrmConnector.Models;
 
 namespace Webcrm.Integrations.WebcrmConnector
@@ -14,8 +14,7 @@ namespace Webcrm.Integrations.WebcrmConnector
             ApiKey = apiKey;
         }
 
-
-        private string ApiKey { get;set; }
+        private string ApiKey { get; set; }
 
         public async Task<string> GetTenPersonNames()
         {
@@ -37,7 +36,7 @@ namespace Webcrm.Integrations.WebcrmConnector
             var organisationResult = await client.QueriesGetAsync(
                 selectOrganisationByCustomField, 1, 1);
 
-            //An organisation could not be found with the correct 
+            //An organisation could not be found with the correct
             //  fortnox Key. Therefore we will return 0
             if (organisationResult.Result.Count == 0)
             {
@@ -57,7 +56,7 @@ namespace Webcrm.Integrations.WebcrmConnector
             return response.Result;
         }
 
-        public async  Task SaveOrganisation(OrganisationDto webcrmOrganisation)
+        public async Task SaveOrganisation(OrganisationDto webcrmOrganisation)
         {
             var client = await Connect();
             await client.OrganisationsByIdPutAsync(
