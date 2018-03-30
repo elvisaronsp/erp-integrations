@@ -4,6 +4,7 @@
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
     <RootNamespace>Webcrm.Integrations.Api</RootNamespace>
     <AssemblyName>Webcrm.Integrations.Api</AssemblyName>
+    <CodeAnalysisRuleSet>stylecop-ruleset.xml</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <NoWarn>NU1701</NoWarn>
@@ -16,11 +17,16 @@
     <WarningsAsErrors />
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.10" NoWard="NU1701" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Synchroniser\Synchroniser.csproj" />
     <ProjectReference Include="..\WebcrmConnector\WebcrmConnector.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
