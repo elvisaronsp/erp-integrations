@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "EditorConfig.editorconfig",
+    "Leopotam.csharpfixformat",
     "ms-azuretools.vscode-azurefunctions",
     "ms-vscode.csharp"
   ]
