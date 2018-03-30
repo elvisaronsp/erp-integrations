@@ -3,5 +3,6 @@
   "azureFunctions.projectLanguage": "C#",
   "azureFunctions.projectRuntime": "beta",
   "azureFunctions.templateFilter": "Verified",
+  "csharp.format.enable": false,
   "editor.tabSize": 4
 }
