@@ -2,10 +2,15 @@
   "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
   "settings": {
     "indentation": {
-      "indentationSize": 3
+      "indentationSize": 3,
+      "useTabs": true
     },
     "orderingRules": {
       "systemUsingDirectivesFirst": false
     }
   }
 }
+
+// TODO: Figure out why this files isn't being used.
+// https://docs.microsoft.com/en-us/visualstudio/code-quality/managed-recommended-rules-rule-set-for-managed-code
+// https://github.com/DotNetAnalyzers/StyleCopAnalyzers/tree/master/documentation

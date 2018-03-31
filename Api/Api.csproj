@@ -17,7 +17,7 @@
     <WarningsAsErrors />
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0" PrivateAssets="All" />
+    <!-- <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0" PrivateAssets="All" /> -->
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.10" NoWard="NU1701" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" PrivateAssets="All" />
   </ItemGroup>
@@ -26,7 +26,7 @@
     <ProjectReference Include="..\WebcrmConnector\WebcrmConnector.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="stylecop.json" />
+    <AdditionalFiles Include="stylecop.json" Link="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
