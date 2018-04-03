@@ -14,4 +14,9 @@
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PowerofficeConnector\PowerofficeConnector.csproj" />
+    <ProjectReference Include="..\Private\Private.csproj" />
+  </ItemGroup>
+
 </Project>
